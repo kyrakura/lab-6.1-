@@ -12,11 +12,18 @@ namespace lab61test
 
         TEST_METHOD(TestMethod1)
         {
-            int c; 
-            int a[] = { 1, -2, 3, -4, 5 };
-            int size = 5;
-            c = Count(a, size);
-            Assert::AreEqual(c, 1);
+            const int N = 25;
+            int a[N];
+            Create(a, N, -11, 13);
+            Assert::AreEqual(-37, Sum(a, N), 0.00001);
+        }
+
+        TEST_METHOD(TestMethod2)
+        {
+            const int N = 20;
+            int a[N];
+            Create(a, N, -11, 13);
+            Assert::AreEqual(1, Count(a, N), 0.00001);
         }
     };
 }
